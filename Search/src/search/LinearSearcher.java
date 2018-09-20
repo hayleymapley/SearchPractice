@@ -1,12 +1,6 @@
 package search;
 
-public class LinearSearcher extends Searcher {
-
-	@Override
-	public void callSearch(int[] array, int key) {
-		int position = makeSearch(array, key);
-		printPositionOfKey(key, position);
-	}
+public class LinearSearcher implements Searcher {
 
 	@Override
 	public int makeSearch(int[] array, int key) {

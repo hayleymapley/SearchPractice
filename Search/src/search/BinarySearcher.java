@@ -1,18 +1,11 @@
 package search;
 
-public class BinarySearcher extends Searcher {
+public class BinarySearcher implements Searcher {
 
-	@Override
-	public void callSearch(int[] array, int key) {
-		int position = makeSearch(array, 0, array.length-1, key);
-		printPositionOfKey(key, position);
-	}
-
+	//To search the whole array, set the leftBound = 0, rightBound = array.length-1
 	@Override
 	public int makeSearch(int[] array, int leftBound, int rightBound, int key) {
-//		int leftBound = 0;
-//		int rightBound = array.length-1;
-		
+	
 		if (rightBound>=leftBound) {
 			int mid = leftBound + (rightBound-leftBound)/2;
 			//Return mid if key is mid element
